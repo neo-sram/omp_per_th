@@ -19,6 +19,7 @@
             "windows": "\uf17a"
           },
           "style": "diamond",
+          "trailing_diamond": "\ue0b4",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
@@ -29,6 +30,7 @@
             "time_format": "Monday at 3:04:05 PM"
           },
           "style": "diamond",
+          "trailing_diamond": "\ue0b4",
           "template": "<#ffffff>\uf5ef</> {{ .CurrentDate | date .Format }}",
           "type": "time"
         },
@@ -37,7 +39,8 @@
           "foreground": "#EFDCF9",
           "style": "diamond",
           "template": "RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB",
-          "type": "sysinfo"
+          "type": "sysinfo",
+          "trailing_diamond": "\ue0b4",
         },
         {
           "background": "#158baf",

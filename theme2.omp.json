@@ -23,6 +23,23 @@
           "type": "os"
         },
         {
+          "background": "#65acbb",
+          "foreground": "#EFDCF9",
+          "properties": {
+            "time_format": "Monday at 3:04:05 PM"
+          },
+          "style": "diamond",
+          "template": "<#ffffff>\uf5ef</> {{ .CurrentDate | date .Format }}",
+          "type": "time"
+        },
+        {
+          "background": "#325b63",
+          "foreground": "#EFDCF9",
+          "style": "diamond",
+          "template": "<#ffffff>\uf85a</> RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB",
+          "type": "sysinfo"
+        },
+        {
           "background": "#158baf",
           "foreground": "#EFDCF9",
           "powerline_symbol": "\ue0b4",
@@ -50,13 +67,6 @@
           "style": "powerline",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
-        },
-        {
-          "background": "#325b63",
-          "foreground": "#EFDCF9",
-          "style": "diamond",
-          "template": "<#ffffff>\uf85a</> RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB",
-          "type": "sysinfo"
         },
         {
           "background": "#1f515e",

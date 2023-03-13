@@ -26,6 +26,7 @@
         {
           "background": "#65acbb",
           "foreground": "#EFDCF9",
+          "leading_diamond": " \ue0b6",
           "properties": {
             "time_format": "Monday at 3:04:05 PM"
           },
@@ -37,6 +38,7 @@
         {
           "background": "#325b63",
           "foreground": "#EFDCF9",
+          "leading_diamond": " \ue0b6",
           "style": "diamond",
           "template": "RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB",
           "type": "sysinfo",
